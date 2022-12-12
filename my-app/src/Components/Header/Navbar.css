@@ -1,0 +1,5 @@
+.menu {
+    display: flex;
+    align-items: flex-start;
+    margin: 1px solid;
+    }
