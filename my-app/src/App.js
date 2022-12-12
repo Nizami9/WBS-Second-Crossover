@@ -1,5 +1,4 @@
-import './App.css';
-import Slider from './Components/WhatsNew/Slider'
+import Slider from "./Components/WhatsNew/Slider";
 import Main from "./Components/Main/Main";
 
 function App() {
