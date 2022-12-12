@@ -8,7 +8,8 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import './Navbar.css';
-import logo from './f5OOxOPupEktguZ4Emk86zdT62k.png'
+import logo from './f5OOxOPupEktguZ4Emk86zdT62k.png';
+
 
 
 const pages = ['Movie', 'TV Show', 'More'];
@@ -32,10 +33,10 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <div className='bar'>
+    <AppBar position="absolut">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-         
           <Typography
             variant="h6"
             noWrap
@@ -49,6 +50,7 @@ function ResponsiveAppBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+              marginLeft: '-150px',
             }}
           >
            <img src={logo} alt="Logo" width={150} />
@@ -65,7 +67,7 @@ function ResponsiveAppBar() {
             >
              
             </IconButton>
-            <h2
+            <h1
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -88,7 +90,7 @@ function ResponsiveAppBar() {
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
-            </h2>
+            </h1>
           </Box>
          
           <Typography
@@ -107,7 +109,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+              
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -120,22 +122,21 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
-            
-             
-          
-            <h2 className='menu' >
+            <h1 className='menu'  >
               {settings.map((setting) => (
                 <MenuItem  key={setting} onClick={handleCloseUserMenu} >
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
-            </h2>
+            </h1>
+           
           </Box>
         </Toolbar>
-      </Container>
+      </Container> 
     </AppBar>
+   
+    </div>
   );
 }
 export default ResponsiveAppBar;
